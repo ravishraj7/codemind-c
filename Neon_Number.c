@@ -1,31 +1,21 @@
 #include<stdio.h>
 int main()
 {
-    int i;
-    int a,b;
-    int x=0;
-    int y=0;
-    scanf("%d%d",&a,&b);
-    for(i=1;i<a;i++)
+    int n,sum=0;
+    scanf("%d",&n);
+    int sq=n*n;
+    while(sq>0)
     {
-        if(a%i==0)
-     {
-        x=x+i;
-     }
+        sum = sum+(sq%10);
+        sq=sq/10;
     }
-    for(i=1;i<b;i++)
+    if(sum==n)
     {
-       if(b%i==0)
-       {
-           y=y+i;
-       }
-    }
-    if((a==y)&&(b=x))
-    {
-        printf("Amicable");
+        printf("Neon Number");
     }
     else
     {
-        printf("Not Amicable");
+        printf("Not Neon Number");
     }
+     return 0;
 }
